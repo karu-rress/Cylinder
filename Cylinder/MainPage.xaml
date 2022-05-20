@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Cylinder.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cylinder"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True" >
+
+    <Grid>
+        <TextBlock x:Name="mainText" Margin="81,26,0,0"  FontSize="55" Text="Project Cylinder" FontWeight="Bold" FontFamily="ms-appx:///Assets/ZegoeLight-U.ttf#Segoe" Height="73" VerticalAlignment="Top" HorizontalAlignment="Left" Width="543" />
+        <Button x:Name="PlayButton" Margin="492,41,0,0" VerticalAlignment="Top" Height="59" Width="59" Click="Button_Click">
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe720;" Height="20" VerticalAlignment="Top" FontSize="20" />
+        </Button>
+
+        <Grid Margin="55,151,55,35" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" Padding="5">
+                <StackPanel x:Name="ApplyGrid"/>
+            </ScrollViewer>
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Padding="5">
+                <StackPanel x:Name="DiscardGrid"/>
+            </ScrollViewer>
+        </Grid>
+        <Button x:Name="IntroButton" Content="Introduction" FontSize="23" Margin="581,41,0,0" VerticalAlignment="Top" Height="59" Width="175" Click="Button_Click1" />
+    </Grid>
+</Page>
