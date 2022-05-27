@@ -50,13 +50,21 @@ public sealed partial class MainPage : Page
 
     private void AddH1Question(string question, IQuestion path)
     {
-        ApplyGrid.Children.Add(new VoiceButton(1, true, question, "(반말 대답)", path.Yes));
+        ApplyGrid.Children.Add(new VoiceButton(1, true, question, "(반말 대답)", path.Yes)
+#if LAST_EXP
+        { IsEnabled = false }
+#endif
+        );
         DiscardGrid.Children.Add(new VoiceButton(1, false, question, "(존댓말 대답)", path.No));
     }
 
     private void AddH2Question(string question, IQuestion path)
     {
-        ApplyGrid.Children.Add(new VoiceButton(2, true, question, "(긴 대답)", path.Yes));
+        ApplyGrid.Children.Add(new VoiceButton(2, true, question, "(긴 대답)", path.Yes)
+#if LAST_EXP
+        { IsEnabled = false }
+#endif
+        );
         DiscardGrid.Children.Add(new VoiceButton(2, false, question, "(짧은 대답)", path.No));
     }
 
