@@ -1,17 +1,30 @@
-﻿#nullable enable
+﻿/// <summary>
+/// Project Cylinder Helper Classes
+/// 
+/// 
+/// Copyright 2022 Karu, Rolling Ress
+/// All rights reserved.
+/// 
+/// </summary>
+
+#nullable enable
 
 namespace Cylinder;
 
+// 가설 처치 여부
 public interface IQuestion
 {
     string Yes { get; }
     string No { get; }
 }
+
+// 답변 음성
 public class Sounds
 {
     public const string SayNow = "ms-appx:///Assets/saynow.wav";
     public const string Self = "ms-appx:///Assets/Introduction.mp3";
 
+    // 가설 1
     public class H1
     {
         public class Q1 : IQuestion
@@ -45,6 +58,8 @@ public class Sounds
             public string No { get; } = "ms-appx:///Assets/PART1/12.mp3";
         }
     }
+
+    // 가설 2
     public class H2
     {
         public class Q1 : IQuestion
@@ -79,6 +94,8 @@ public class Sounds
         }
 
     }
+
+    // 가설 3
     public class H3
     {
         public class Q1 : IQuestion
